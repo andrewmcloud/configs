@@ -9,6 +9,7 @@ syntax enable
 "gets rid of vi compatibility stuff
 set nocompatible
 
+"line numbers
 set number
 
 "tab settings
@@ -44,6 +45,7 @@ set smartcase
 set gdefault
 set incsearch
 set hlsearch
+nnoremap <esc> :noh<return><esc>
 "remap beginning and end of line movements
 nnoremap <leader>f $
 nnoremap <leader>a ^
@@ -92,6 +94,7 @@ call vundle#begin()
 "Plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdTree'
+Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/NERDCommenter'
@@ -102,3 +105,6 @@ call vundle#end()
 filetype plugin indent on
 """"""""""""""""""""""""VUNDLE""""""""""""""""""""""""
 
+"Plugin configs
+"vim-markdown
+let g:vim_markdown_folding_disabled = 1
