@@ -1,6 +1,6 @@
 "Andrew's vimrc
 
-let mapleader =","
+let mapleader =" "
 
 filetype plugin indent on
 filetype plugin on
@@ -44,7 +44,7 @@ set smartcase
 set gdefault
 set incsearch
 set hlsearch
-nnoremap <leader><space> :noh<cr>
+
 "use tab to move between matching ()[]{}
 nnoremap <tab> %
 vnoremap <tab> %
@@ -59,10 +59,20 @@ inoremap jj <ESC>
 nnoremap <leader>w <C-w>v<C-w>l
 
 "navigating window splits
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+nnoremap <leader>< 10<C-w><
+nnoremap <leader>> 10<C-w>>
+
+"buffers
+set hidden
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprevious<CR>
+
+"NERDTree
+nnoremap <leader>t :NERDTree<CR>
 
 " Python Specific
 let python_highlight_all = 1
