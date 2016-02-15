@@ -44,6 +44,9 @@ set smartcase
 set gdefault
 set incsearch
 set hlsearch
+"remap beginning and end of line movements
+nnoremap <leader>f $
+nnoremap <leader>a ^
 
 "use tab to move between matching ()[]{}
 nnoremap <tab> %
@@ -68,8 +71,8 @@ nnoremap <leader>> 10<C-w>>
 
 "buffers
 set hidden
-nnoremap <C-l> :bnext<CR>
-nnoremap <C-h> :bprevious<CR>
+nnoremap <leader>n :bnext<CR>
+nnoremap <leader>p :bprevious<CR>
 
 "NERDTree
 nnoremap <leader>t :NERDTree<CR>
