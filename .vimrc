@@ -5,6 +5,8 @@ let mapleader =" "
 filetype plugin indent on
 filetype plugin on
 syntax enable
+set background=dark
+colorscheme solarized
 
 "gets rid of vi compatibility stuff
 set nocompatible
@@ -36,6 +38,7 @@ set laststatus=2
 set relativenumber
 set showmatch
 set noswapfile
+set tw=100
 
 "searching and moving
 nnoremap / /\v
@@ -45,7 +48,7 @@ set smartcase
 set gdefault
 set incsearch
 set hlsearch
-nnoremap <esc> :noh<return><esc>
+nnoremap <leader>q :nohlsearch<CR>
 "remap beginning and end of line movements
 nnoremap <leader>f $
 nnoremap <leader>a ^
@@ -84,6 +87,9 @@ let python_highlight_all = 1
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd BufRead *.py set nocindent
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+
+"MarkDown specific
+au BufRead,BufNewFile *.md setlocal textwidth=120
 
 """"""""""""""""""""""""VUNDLE""""""""""""""""""""""""
 "Vundle
